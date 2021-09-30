@@ -234,7 +234,7 @@ exports.clean = clean;
 /* Build */
 
 const build = gulp.series(
-  copy,
+  //copy,
   html,
   js,
   imageMin,
