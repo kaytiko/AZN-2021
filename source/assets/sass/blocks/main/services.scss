@@ -1,0 +1,111 @@
+.services {
+    &__wrapper {
+        padding: 0 rem(20px);
+
+        @include tablet {
+            padding: 0;
+        }
+    }
+
+    &__container {
+    }
+
+    &__subtitle {
+    }
+
+    &__titles {
+        padding: rem(160px) 0 rem(180px) 0;
+    }
+
+    &__list {
+        display: none;
+        
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+
+            &:not(:last-of-type) {
+                padding: 0 0 rem(15px) 0;
+            }
+
+            &:first-of-type:hover,
+            &:nth-of-type(2):hover,
+            &:last-of-type {
+                animation-play-state: paused;
+            }
+    
+            &:first-of-type {
+                flex-direction: row;
+                animation: ticker-left 70s linear infinite;
+            }
+    
+            &:nth-of-type(2) {
+                animation: ticker-right 70s linear infinite;
+                transform: translateX(-60vw);
+            }
+
+            &:last-of-type {
+                animation: ticker-left 50s linear infinite;
+                transform: translateX(-143vw);
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(30px) 0;
+        border-top: 1px solid var(--white);
+
+        &:last-of-type {
+            border-bottom: 1px solid var(--white);
+            @include tablet {
+                border: none;
+            }
+        }
+
+        @include tablet {
+            align-items: flex-start;
+            margin: 0 rem(50px) 0 0;
+            padding: 0; 
+            white-space: nowrap; 
+            border: none; 
+        }
+    }
+
+    &__number {
+        @include tablet {
+            margin: rem(14px) 0 0;
+            padding: 0 1rem 0 0;
+        }
+    }
+
+    &__link {
+        font-family: var(--neue);
+        font-size: clamp(1.75rem, calc(0.7750rem + 4.8750vw), 6.625rem);
+        line-height: 1;
+        color: var(--white);
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+    @supports (-webkit-text-stroke: 1px var(--white)) {
+        &__link--stroke {
+            @include tablet {
+                -webkit-text-stroke: 1px var(--white);
+                text-stroke: 1px var(--white);
+                color: transparent;
+      
+                &:hover {
+                  -webkit-text-stroke: none;
+                  color: var(--white);
+                }
+            }
+        }
+    }
+}

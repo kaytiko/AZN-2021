@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+::selection {
+  background: var(--main-orange);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-blue);
+
+  font-family: var(--helvetica);
+  font-weight: 300;
+  font-size: ($root-font-size / 16px) * 100%;
+  color: var(--text-color);
+  
+
+  overflow-x: hidden;
+
+  opacity:0;
+  animation: fadeIn cubic-bezier(.785,.135,.15,.86) forwards .7s;
+  animation-delay: .3s;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--main-orange);
+  }
+
+  &:active {
+    color: var(--main-orange);
+    opacity: 0.75;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--neue);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.76rem, calc(2.1245rem + 3.1775vw), 5.9375rem);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(2rem, calc(1.7000rem + 1.5000vw), 3.5rem);
+  line-height: 1;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: rem(26px);
+}
+
+p {
+  font-family: var(--helvetica);
+  font-weight: 300;
+}
+
+.list-style--none {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}

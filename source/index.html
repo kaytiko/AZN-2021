@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZNResearch главная</title>
+
+    <meta name="theme-color" content="#E74A26" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FF7D25" media="(prefers-color-scheme: light)">
+
+    <!-- <link rel="manifest" href="manifest.webmanifest.json"> -->
+
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <script src="js/ticker.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+</head>
+
+<body class="main">
+    <!--<div style="display: none;">
+        <include src="build/img/sprite.svg"></include>
+    </div>-->
+
+    <header class="header header--main">
+        //= common/header-main.html
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro__wrapper wrapper">
+                <div class="intro__container container--grid">
+                    <div class="intro__content">
+                        <h1 class="intro__title text--uppercase">Эволюция <br>через инновации</h1>
+                        <div class="intro__info">
+                            <div class="intro__animation">
+                                <svg class="intro__image" width="483" height="224" xmlns="http://www.w3.org/2000/svg"
+                                    id="enW5xMsTYq11" viewBox="0 0 483 224" shape-rendering="geometricPrecision"
+                                    text-rendering="geometricPrecision">
+                                    <circle id="enW5xMsTYq12" r="111.5" transform="matrix(-1 0 0 -1 371 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq13" r="111.5" transform="matrix(-1 0 0 -1 334 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq14" r="111.5" transform="matrix(-1 0 0 -1 297 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq15" r="111.5" transform="rotate(180 130 56)" fill="none"
+                                        stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq16" r="111.5" transform="rotate(180 111.5 56)" fill="none"
+                                        stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq17" r="111.5" transform="matrix(-1 0 0 -1 149 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq18" r="111.5" transform="matrix(-1 0 0 -1 186 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                    <circle id="enW5xMsTYq19" r="111.5" transform="matrix(-1 0 0 -1 112 112)"
+                                        fill="none" stroke="#FFF" stroke-width="1"></circle>
+                                </svg>
+                            </div>
+                            <p class="intro__about text--uppercase">Наша цель — создание простых и эффективных решений
+                                для вашего бизнеса</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__social">
+                    <div class="intro__block">
+                        <ul class="intro__social-list list-style--none">
+                            <li class="intro__social-item"><a href="" class="intro__social-link link-animate"
+                                    title="AZN Facebook">Facebook</a></li>
+                            <li class="intro__social-item"><a href="" class="intro__social-link link-animate"
+                                    title="AZN Twitter">Twitter</a></li>
+                        </ul>
+                        <a class="intro__contact link-animate" title="Go to contact page">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about section--standart">
+            <div class="about__wrapper wrapper">
+                <div class="about__container container--grid">
+                    <div class="col-md-1">
+                        <span class="about__subtitle page__subtitle">О нас</span>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="about__title page__title text--uppercase">Проектируем бренды, разрабатываем
+                            веб-сайты, создаем приложения, обучаем команды и многое другое</h2>
+                    </div>
+                    <div class="about__button" style="display: none;">
+                        <svg class="about__button-inner button--round button--animated">
+                            <use xlink:href="#button-more" class="button--round__border"></use>
+                            <use xlink:href="#button-angle" class="button--round__angle"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services section--standart">
+            <div class="services__wrapper wrapper">
+                <div class="services__container container--grid">
+                    <div class="col-md-1">
+                        <span class="services__subtitle page__subtitle">Services</span>
+                    </div>
+                </div>
+            </div>
+            <div class="services__wrapper" id="ticker">
+                <div class="services__titles">
+                    <ul class="services__list list-style--none">
+                        <li class="services__item"><span class="services__number">1</span><a href=""
+                                class="services__link services__link--stroke" title="Web-design">Веб-дизайн</a></li>
+                        <li class="services__item"><span class="services__number">2</span><a href=""
+                                class="services__link" title="Development">Разработка</a></li>
+                        <li class="services__item"><span class="services__number">3</span><a href=""
+                                class="services__link" title="Mobile app">Мобильные приложения</a></li>
+                        <li class="services__item"><span class="services__number">4</span><a href=""
+                                class="services__link" title="Consulting">Консалтинг</a></li>
+                        <li class="services__item"><span class="services__number">5</span><a href=""
+                                class="services__link services__link--stroke" title="Research">Исследования</a></li>
+                    </ul>
+                    <ul class="services__list list-style--none">
+                        <li class="services__item"><span class="services__number">2</span><a href=""
+                                class="services__link" title="Development">Разработка</a></li>
+                        <li class="services__item"><span class="services__number">3</span><a href=""
+                                class="services__link" title="Mobile app">Мобильные приложения</a></li>
+                        <li class="services__item"><span class="services__number">4</span><a href=""
+                                class="services__link" title="Consulting">Консалтинг</a></li>
+                        <li class="services__item"><span class="services__number">5</span><a href=""
+                                class="services__link services__link--stroke" title="Research">Исследования</a></li>
+                        <li class="services__item"><span class="services__number">1</span><a href=""
+                                class="services__link services__link--stroke" title="Web-design">Веб-дизайн</a></li>
+                    </ul>
+                    <ul class="services__list list-style--none">
+                        <li class="services__item"><span class="services__number">4</span><a href=""
+                                class="services__link" title="Consulting">Консалтинг</a></li>
+                        <li class="services__item"><span class="services__number">5</span><a href=""
+                                class="services__link services__link--stroke" title="Research">Исследования</a></li>
+                        <li class="services__item"><span class="services__number">1</span><a href=""
+                                class="services__link services__link--stroke" title="Web-design">Веб-дизайн</a></li>
+                        <li class="services__item"><span class="services__number">2</span><a href=""
+                                class="services__link" title="Development">Разработка</a></li>
+                        <li class="services__item"><span class="services__number">3</span><a href=""
+                                class="services__link" title="Mobile app">Мобильные приложения</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="clients section--standart">
+            <div class="clients__wrapper wrapper">
+                <div class="clients__container container--grid">
+                    <div class="col-md-1">
+                        <h4 class="clients__subtitle page__subtitle">Наши клиенты</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="clients__title page__title text--uppercase">Мы работаем с <br>амбициозными людьми</h2>
+                        <div class="clients__info">
+                            <ul class="clients__info-list list-style--none list--small-padding">
+                                <li class="clients__info-item">
+                                    <h3><a href="" class="clients__info-link text--uppercase">Компании</a></h3>
+                                    <svg class="clients__info-icon" width="30" height="30"></svg>
+                                </li>
+                                <li class="clients__info-item">
+                                    <h3><a href="" class="clients__info-link text--uppercase">Бренды</a></h3>
+                                    <svg class="clients__info-icon" width="30" height="30"></svg>
+                                </li>
+                                <li class="clients__info-item">
+                                    <h3><a href="" class="clients__info-link text--uppercase">Стартапы</a></h3>
+                                    <svg class="clients__info-icon" width="30" height="30"></svg>
+                                </li>
+                                <li class="clients__info-item">
+                                    <h3><a href="" class="clients__info-link text--uppercase">Агенства</a></h3>
+                                    <svg class="clients__info-icon" width="30" height="30"></svg>
+                                </li>
+                                <li class="clients__info-item">
+                                    <h3><a href="" class="clients__info-link text--uppercase">Сервисы</a></h3>
+                                    <svg class="clients__info-icon" width="30" height="30"></svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-products section--standart">
+            <div class="best-products__wrapper wrapper">
+                <div class="best-products__container container--grid">
+                    <div class="best-products__content">
+                        <div class="best-products__title-container">
+                            <h2 class="best-products__title text--uppercase">Customer <br>intelligence suite</h2>
+                            <div class="best-products__info product-info">
+                                <div class="product-info__header">
+                                    <p class="product-info__text page__text text--uppercase">Помогает бизнесу анализировать мнения потребителей, находить важные инсайты и превращать их в деньги</p>
+                                </div>
+                                <div class="product-info__footer">
+                                    <div class="product-info__block">
+                                        <p class="product-info__text page__text text--uppercase">Попробуйте бесплатно триал версию в течение 7 дней</p>
+                                    </div>
+                                    <div class="product-info__button page__button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer footer--main">
+        //= common/footer-main.html
+    </footer>
+    <script xmlns:ns1="http://www.w3.org/1999/xlink" ns1:href="https://cdn.svgator.com/ply/5c7f360c.js"
+        src="https://cdn.svgator.com/ply/5c7f360c.js"></script>
+    <script>(function (s, i, u, o, w, d, t, n, x, e, p) { w[o] = w[o] || {}; w[o][s] = w[o][s] || []; w[o][s].push(i); e = d.createElementNS(n, t); e.async = true; e.setAttributeNS(x, 'href', [u, s, '.', 'j', 's'].join('')); e.setAttributeNS(null, 'src', [u, s, '.', 'j', 's'].join('')); p = d.getElementsByTagName(t)[0]; p.parentNode.insertBefore(e, p); })('5c7f360c', { "root": "enW5xMsTYq11", "animations": [{ "elements": { "enW5xMsTYq12": { "transform": { "data": { "r": 180, "t": { "x": 371, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 742, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 631, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 742, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq13": { "transform": { "data": { "r": 180, "t": { "x": 334, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 668, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 668, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq14": { "transform": { "data": { "r": 180, "t": { "x": 297, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 557, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq17": { "transform": { "data": { "r": 180, "t": { "x": 149, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq18": { "transform": { "data": { "r": 180, "t": { "x": 186, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 409, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq19": { "transform": { "data": { "r": 180, "t": { "x": 112, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 224, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 335, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 224, "y": 224, "type": "corner" } }] } } } }, "s": "MODA1M2IyNTk5YmFjYTVk5OGFiYTBCYTZhNTUJ5NzFVNmE2N1A2NzY3SNjNNNTlDOWJhMGE5OHWM5YWFiYTBhNmE1NTXk3MTY4NjM1OWEwSGFTiOWNhOTk4YWJhMGE2BYTVhYTU5NzFVNjc2MSzU5OWRhMGEzYTM1OTIcxNjg2MzU5TDk4YTNNhYjljYTlKYTU5OGFiXOWM1OTcxOWQ5OGEzYAWE5Y0s2MzU5YWFhNzNljOWM5YjU5NzE2OGIL0" }], "options": "MTDAxMDg4MmY4MDgxNmCU3ZjgxMmY0NzJmNzkO3YzZlNzEyZjhh" }, 'https://cdn.svgator.com/ply/', '__SVGATOR_PLAYER__', window, document, 'script', 'http://www.w3.org/2000/svg', 'http://www.w3.org/1999/xlink')</script>
+</body>
+
+</html>

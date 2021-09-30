@@ -1,0 +1,49 @@
+.privacy {
+    &__label {
+        position: absolute;
+        top: rem(20px);
+        left: 0;
+        font-size: rem(14px);
+        line-height: 1;
+        color: var(--white);
+
+        @include tablet {
+            position: relative;
+            margin-right: auto;
+            top: 0;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        position: relative;
+        padding: rem(20px) 0;
+        border-top: 1px solid rgba(white, 0.6);
+
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+    &__item {
+        padding: 0 0 rem(12px) 0;
+        font-size: rem(14px);
+        line-height: 1;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        &:not(:last-of-type) {
+            @include tablet {
+                margin: 0 rem(40px) 0 0;
+            }
+        }
+    }
+    &__link {
+        color: var(--white);
+        text-transform: uppercase;
+    }
+}

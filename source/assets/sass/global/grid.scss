@@ -1,0 +1,226 @@
+$screen-xs:                   0 !default;
+$screen-sm:                   480px !default;
+$screen-md:                   768px !default;
+$screen-lg:                   992px !default;
+$screen-xl:                   1200px !default;
+$screen-xxl:                  1800px !default;
+
+
+$width-container: 1500px;
+$width-container-small: 1160px;
+
+$decktop-padding: 20px;
+$tablet-padding: 30px;
+$small-padding: 20px;
+
+$grid-columns: 4;
+$column-padding: 40px;
+$grid-gap: 40px;
+
+
+@mixin make-wrapper($width, $padding) {
+  max-width: $width;
+  padding: 0 $padding;
+}
+
+@mixin get-width ($column: 1, $columns: $grid-columns) {
+  $width: (100% / $columns) * $column;
+  max-width: $width;
+  flex: 0 0 $width;
+}
+
+@mixin make-col ($column:  1, $columns: $grid-columns, $gutter:  $column-padding) {
+  @include get-width($column, $columns);
+
+  @if ($gutter != false) {
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
+}
+
+@mixin col ($screen:  xs, $column:  $grid-columns, $columns: $grid-columns, $gutter:  $column-padding) {
+
+  @if ($screen == '') {
+    @include make-col($column, $columns, $gutter);
+  }
+
+  @if ($screen == xs) {
+    @include make-col($column, $columns, $gutter);
+  }
+
+  @if ($screen == sm) {
+    @media (min-width: $screen-sm) {
+      @include make-col($column, $columns, $gutter);
+    }
+  }
+
+  @if ($screen == md) {
+    @media (min-width: $screen-md) {
+      @include make-col($column, $columns, $gutter);
+    }
+  }
+
+  @if ($screen == lg) {
+    @media (min-width: $screen-lg) {
+      @include make-col($column, $columns, $gutter);
+    }
+  }
+
+  @if ($screen == xl) {
+    @media (min-width: $screen-xl) {
+      @include make-col($column, $columns, $gutter);
+    }
+  }
+
+  @if ($screen == xxl) {
+    @media (min-width: $screen-xxl) {
+      @include make-col($column, $columns, $gutter);
+    }
+  }
+}
+
+@mixin column-grid ($grid-width){
+  @supports (display: grid) {
+    grid-column: span $grid-width;
+  }
+}
+
+%column-basic-styles {
+  position: relative;
+  grid-column: span 4;
+  width: 100%;
+  min-height: 1px;
+}
+
+@mixin col-x-list {
+  @for $i from 1 through $grid-columns {
+      .col-#{$i} { @extend %column-basic-styles; }
+      .col-xs-#{$i} { @extend %column-basic-styles; }
+      .col-sm-#{$i} { @extend %column-basic-styles; }
+      .col-md-#{$i} { @extend %column-basic-styles; }
+      .col-xl-#{$i} { @extend %column-basic-styles; }
+  }
+}
+
+@include col-x-list;
+
+.wrapper {
+    margin: auto;
+    width:100%;
+    padding: 0 $small-padding;
+
+    &--small {
+      @media (min-width: $screen-md) {
+        @include make-wrapper($width-container-small, $tablet-padding);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      @include make-wrapper($width-container, $tablet-padding);
+    }
+    @media (min-width: $screen-xl) {
+      padding: 0 $decktop-padding;
+    }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      @include col('', $i);
+    }
+  }
+  
+  @media (min-width: $screen-xs) {
+    @for $i from 1 through 12 {
+      .col-xs-#{$i} {
+        @include col(xs, $i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-sm) {
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        @include col(sm, $i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-md) {
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        @include col(md, $i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-xl) {
+    @for $i from 1 through 12 {
+      .col-xl-#{$i} {
+        @include col(xl, $i);
+      }
+    }
+  }
+}
+
+.container--grid {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $screen-md) {
+    justify-content: space-between;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: $grid-gap;
+    grid-row-gap: $grid-gap;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat($grid-columns, 1fr);
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include column-grid($i);
+    }
+  }
+  
+  @media (min-width: $screen-xs) {
+    @for $i from 1 through $grid-columns {
+      .col-xs-#{$i} {
+        @include column-grid($i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-sm) {
+    @for $i from 1 through $grid-columns {
+      .col-sm-#{$i} {
+        @include column-grid($i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-md) {
+    @for $i from 1 through $grid-columns {
+      .col-md-#{$i} {
+        @include column-grid($i);
+      }
+    }
+  }
+  
+  @media (min-width: $screen-xl) {
+    @for $i from 1 through $grid-columns {
+      .col-xl-#{$i} {
+        @include column-grid($i);
+      }
+    }
+  }
+  
+}

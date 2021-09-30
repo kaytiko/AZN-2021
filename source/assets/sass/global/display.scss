@@ -1,0 +1,29 @@
+.flex {
+    display: flex;
+    flex: 0 1 auto;
+}
+
+.fle--wrap {
+    flex-wrap:wrap;
+}
+
+@for $i from 1 through 7 {
+    .j--#{ nth(null start end center stretch between around, $i % 7 + 1) } { 
+        justify-content: #{ nth(null flex-start flex-end center stretch space-between space-around, $i % 7 + 1) };
+    }
+}
+
+@for $i from 1 through 4 {
+    .a-items--#{ nth(null start end center stretch, $i % 5 + 1) } { 
+        align-items: #{ nth(null flex-start flex-end center stretch, $i % 5 + 1) };
+    }
+}
+
+@include mobile {
+    @for $i from 1 through 12 {
+        .small-#{ nth(null flex-column flex-column--reverse j--start j--end j--cener a-items--start a-items--center a-items--end wrap order-1 order-2, $i % 12 + 1) } { 
+            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap order order, $i % 12 + 1)}: 
+            #{ nth(null column column-reverse flex-start flex-end flex-center flex-start center flex-end wrap 1 2, $i % 12 + 1) };
+        } 
+    }
+}

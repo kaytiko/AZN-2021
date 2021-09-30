@@ -1,0 +1,102 @@
+/* Animation */
+
+@keyframes fadeIn {
+  0% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+      opacity:0;
+      transform:translateY(100%);
+  }
+  100% {
+      opacity:1;
+      transform:translateY(0);
+  }
+}
+
+@keyframes ticker-left {
+  0%   { transform: translate(0%, 0); }
+  100% { transform: translate(-141.5vw, 0); }
+}
+
+@keyframes ticker-right {
+  0% { transform: translate(-141.5vw, 0); }
+  100%   { transform: translate(0%, 0); }
+}
+
+/* Animation classes */
+
+.anim-items {
+  @include tablet {
+    opacity: 0;
+  }
+}
+
+.animate {
+  @include tablet {
+    animation: fadeInTop cubic-bezier(.25,.46,.45,.94) forwards 1s;
+  }
+}
+
+@mixin animObject($distance, $delay, $duration) {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(.19,1,.22,1);
+  transform: translate3d(0px, $distance + px, 0px);
+  transition-delay: $delay;
+  transition-duration: $duration;
+}
+
+@mixin animateObject {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+
+/* Button and link animate */
+
+.link-animate {
+  --text-color: #fff;
+  --font-size: 16px;
+  --duration: .26s;
+  --font-shadow: 17px;
+
+  display: flex;
+  overflow: hidden;
+
+  line-height: var(--font-size);
+  outline: none;
+  text-decoration: none;
+  transform: translateY(var(--y)) translateZ(0);
+  transition: transform var(--duration) ease;
+  text-shadow: 0 var(--font-shadow) 0 var(--text-color);
+
+  span {
+    display: block;
+    backface-visibility: hidden;
+    transition: transform var(--duration) ease;
+    transform: translateY(var(--m)) translateZ(0);
+    $i: 1;
+    @while $i < 12 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i / 20 + s;
+      }
+      $i: $i + 1;
+    }
+  }
+
+  &:hover {
+    color: var(--text-color);
+    span {
+      --m: calc(var(--font-size) * -1);
+    }
+  }
+}
+

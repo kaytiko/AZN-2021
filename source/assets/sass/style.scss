@@ -1,0 +1,24 @@
+@import "global/pxtorem.scss";
+@import "global/normalize.scss";
+@import "global/variables.scss";
+@import "global/mixin.scss";
+@import "global/global.scss";
+@import "global/grid.scss";
+@import "global/text-style.scss";
+@import "global/display.scss";
+@import "global/section.scss";
+@import "global/form.scss";
+@import "global/animation.scss";
+@import "global/fonts.scss";
+
+@import "blocks/common/header-main.scss";
+@import "blocks/common/footer-main.scss";
+@import "blocks/common/privacy.scss";
+@import "blocks/common/social.scss";
+
+
+@import "blocks/main/intro.scss";
+@import "blocks/main/about.scss";
+@import "blocks/main/services.scss";
+@import "blocks/main/clients.scss";
+@import "blocks/main/best-products.scss";

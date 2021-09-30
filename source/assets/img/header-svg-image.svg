@@ -1,0 +1,42 @@
+<svg width="483" height="224" viewBox="0 0 483 224" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background-color: rebeccapurple;">
+<circle cx="371" cy="112" r="111.5" transform="rotate(180 371 112)" stroke="white"/>
+<circle cx="334" cy="112" r="111.5" transform="rotate(180 334 112)" stroke="white"/>
+<circle cx="297" cy="112" r="111.5" transform="rotate(180 297 112)" stroke="white"/>
+<circle cx="260" cy="112" r="111.5" transform="rotate(180 260 112)" stroke="white"/>
+<circle cx="223" cy="112" r="111.5" transform="rotate(180 223 112)" stroke="white"/>
+<circle id="circle-2" cx="149" cy="112" r="111.5" transform="rotate(180 149 112)" stroke="white"/>
+<circle cx="186" cy="112" r="111.5" transform="rotate(180 186 112)" stroke="white"/>
+<circle id="circle-1" cx="112" cy="112" r="111.5" stroke="white"/>
+<animate 
+           xlink:href="#circle-1"
+           attributeName="cx"
+           from="112"
+           to="223" 
+           dur="2s"
+           begin="0s"
+           calcMode="spline"
+           repeatCount="indefinite"
+           values="112; 223; 112; 112"
+           keyTimes="0; 0.5; 0.9; 1"
+           keySplines="0.65, 0, 0.35, 1;
+                       0.65, 0, 0.35, 1
+                       0.65, 0, 0.35, 1"
+           fill="freeze"  
+           id="circ-anim"/>
+<animate 
+           xlink:href="#circle-2"
+           attributeName="cx"
+           from="149"
+           to="75" 
+           dur="1.9s"
+           begin="0s"
+           calcMode="spline"
+           repeatCount="indefinite"
+           values="149; 76; 149; 149"
+           keyTimes="0; 0.5; 0.9; 1"
+           keySplines="0.65, 0, 0.35, 1;
+                       0.65, 0, 0.35, 1
+                       0.65, 0, 0.35, 1"
+           fill="freeze"  
+           id="circ-anim"/>
+</svg>

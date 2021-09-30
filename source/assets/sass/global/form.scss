@@ -1,0 +1,18 @@
+@mixin create-button($color, $colorActive) {
+    color: $color;
+    text-shadow: 0px 0px 0px $color;
+    border:2px solid $color;
+
+    &:hover {
+        background-color: $color;
+        border-color: $color;
+        color: $colorActive;
+    }
+
+    &:active {
+        background-color: $color;
+        border-color: $color;
+        color: $colorActive;
+        opacity: 0.7;
+    }
+}

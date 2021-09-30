@@ -1,0 +1,50 @@
+.clients {
+    border-top: 1px solid rgba(white, 0.6);
+
+    &__wrapper {     
+    }
+
+    &__container {  
+    }
+
+    &__subtitle {
+    }
+
+    &__title {
+    }
+
+    &__info {
+        padding: rem(60px) 0 0;
+
+        @include tablet {
+            padding: rem(120px) 0 0;
+        }
+    }
+
+    &__info-list {
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(30px) 0;
+
+        border-top: 1px solid var(--white);
+
+        &:last-of-type {
+            border-bottom: 1px solid var(--white);
+        }
+
+        @include tablet {
+            padding: rem(35px) 0;
+        }
+    }
+
+    &__info-link {
+        font-family: var(--helvetica);
+        color: var(--white);
+    }
+
+    &__info-icon {
+    }
+}

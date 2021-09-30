@@ -1,0 +1,91 @@
+.text {
+    &--uppercase {
+        text-transform: uppercase;
+    }
+    &--italic {
+        font-style: italic;
+    }
+    &--light {
+        font-weight: 300;
+    }
+    &--regular {
+        font-weight: 400;
+    }
+
+    // Colors
+    &--white {
+        color: var(--white);
+    }
+    &--black {
+        color: var(--black);
+    }
+    &--bright-blue {
+        color: var(--bright-blue);
+    }
+    &--orange {
+        color: var(--main-orange);
+    }
+}
+
+.page {
+    &__subtitle {
+        font-size: rem(14px);
+        line-height: 1;
+        text-transform: uppercase;
+
+        position: relative;
+        padding: 0 0 0 rem(18px);
+
+        &::before {
+            @include pseudo-element();
+            top: rem(2px);
+            left: 0;
+            width: rem(10px);
+            height: rem(10px);
+            border-radius: 40%;
+            background-color: var(--main-orange);
+        }
+    }
+}
+
+@for $i from 1 through 3 {
+    .text--#{ nth(null left right center, $i % 4 + 1) } { 
+        text-align: #{ nth(null left right center, $i % 4 + 1) };
+    }
+}
+
+@include mobile {
+    @for $i from 1 through 3 {
+        .small-text--#{ nth(null left right center, $i % 4 + 1) } { 
+          text-align: #{ nth(null left right center, $i % 4 + 1) };
+        }
+    }
+}
+
+@include tablet {
+    @for $i from 1 through 3 {
+        .medium-text--#{ nth(null left right center, $i % 4 + 1) } { 
+          text-align: #{ nth(null left right center, $i % 4 + 1) };
+        }
+    }
+}
+
+@include desktop {
+    @for $i from 1 through 3 {
+        .large-text--#{ nth(null left right center, $i % 4 + 1) } { 
+          text-align: #{ nth(null left right center, $i % 4 + 1) };
+        }
+    }
+}
+
+@include bgdesktop {
+    @for $i from 1 through 3 {
+        .xlarge-text--#{ nth(null left right center, $i % 4 + 1) } { 
+          text-align: #{ nth(null left right center, $i % 4 + 1) };
+        }
+    }
+}
+
+
+
+
