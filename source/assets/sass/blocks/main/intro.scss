@@ -1,6 +1,7 @@
 .intro {
     height: 100vh;
     display: flex;
+    background-image: url('/img/intro-bg.jpg');
 
     &__wrapper {
     }
@@ -102,8 +103,8 @@
 
     &__circle {
         position: absolute;
-        bottom: rem(85px);
-        left: rem(260px);
+        //bottom: rem(85px);
+        //left: rem(260px);
         width: clamp(rem(320px), 24vw, rem(480px));
         height: clamp(rem(320px), 24vw, rem(480px));
 
@@ -113,7 +114,7 @@
 
     &__star {
         position: absolute;
-        bottom: rem(65px);
-        left: rem(261px);
+        //bottom: rem(65px);
+        //left: rem(261px);
     }
 }

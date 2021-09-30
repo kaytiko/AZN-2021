@@ -2027,6 +2027,7 @@ p {
 .intro {
   height: 100vh;
   display: flex;
+  background-image: url("/img/intro-bg.jpg");
 }
 
 .intro__content {
@@ -2130,8 +2131,6 @@ p {
 
 .intro__circle {
   position: absolute;
-  bottom: 5.3125rem;
-  left: 16.25rem;
   width: clamp(20rem, 24vw, 30rem);
   height: clamp(20rem, 24vw, 30rem);
   background-color: var(--heaven-blue);
@@ -2140,8 +2139,6 @@ p {
 
 .intro__star {
   position: absolute;
-  bottom: 4.0625rem;
-  left: 16.3125rem;
 }
 
 .about {
