@@ -71,6 +71,10 @@
                         <a class="intro__contact link-animate" title="Go to contact page">Contact</button>
                     </div>
                 </div>
+                <div class="intro__circle"></div>
+                <div class="intro__star">
+                    <img src="/img/star--blue.png" width="541" height="541" alt="Star image for intro">
+                </div>
             </div>
         </section>
         <section class="about section--standart">
@@ -203,6 +207,30 @@
     <footer class="footer footer--main">
         //= common/footer-main.html
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let introCircle = document.querySelector('.intro__circle');
+            let introStar = document.querySelector('.intro__star');
+
+            document.addEventListener('mousemove', parallax);
+
+            function normalizeOffset(offset, dimension) {
+                return ((2 / dimension) * offset) + 1;
+            }
+
+            function parallax (e) {
+                let normal = {
+                    x: normalizeOffset(e.clientX, window.innerWidth),
+                    y: normalizeOffset(e.clientY, window.innerHeight)
+                }
+
+                introCircle.style.left = `${Math.floor(normal.x*150 + 360)}px`;
+                introCircle.style.bottom = `${Math.floor(-normal.y*150 + 85)}px`;
+                introStar.style.left = `${Math.floor(normal.x*70 + 360)}px`;
+                introStar.style.bottom = `${Math.floor(-normal.y*70 + 65)}px`;
+            }
+        })
+    </script> 
     <script xmlns:ns1="http://www.w3.org/1999/xlink" ns1:href="https://cdn.svgator.com/ply/5c7f360c.js"
         src="https://cdn.svgator.com/ply/5c7f360c.js"></script>
     <script>(function (s, i, u, o, w, d, t, n, x, e, p) { w[o] = w[o] || {}; w[o][s] = w[o][s] || []; w[o][s].push(i); e = d.createElementNS(n, t); e.async = true; e.setAttributeNS(x, 'href', [u, s, '.', 'j', 's'].join('')); e.setAttributeNS(null, 'src', [u, s, '.', 'j', 's'].join('')); p = d.getElementsByTagName(t)[0]; p.parentNode.insertBefore(e, p); })('5c7f360c', { "root": "enW5xMsTYq11", "animations": [{ "elements": { "enW5xMsTYq12": { "transform": { "data": { "r": 180, "t": { "x": 371, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 742, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 631, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 742, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq13": { "transform": { "data": { "r": 180, "t": { "x": 334, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 668, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 668, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq14": { "transform": { "data": { "r": 180, "t": { "x": 297, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 557, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq17": { "transform": { "data": { "r": 180, "t": { "x": 149, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq18": { "transform": { "data": { "r": 180, "t": { "x": 186, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 409, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq19": { "transform": { "data": { "r": 180, "t": { "x": 112, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 224, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 335, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 224, "y": 224, "type": "corner" } }] } } } }, "s": "MODA1M2IyNTk5YmFjYTVk5OGFiYTBCYTZhNTUJ5NzFVNmE2N1A2NzY3SNjNNNTlDOWJhMGE5OHWM5YWFiYTBhNmE1NTXk3MTY4NjM1OWEwSGFTiOWNhOTk4YWJhMGE2BYTVhYTU5NzFVNjc2MSzU5OWRhMGEzYTM1OTIcxNjg2MzU5TDk4YTNNhYjljYTlKYTU5OGFiXOWM1OTcxOWQ5OGEzYAWE5Y0s2MzU5YWFhNzNljOWM5YjU5NzE2OGIL0" }], "options": "MTDAxMDg4MmY4MDgxNmCU3ZjgxMmY0NzJmNzkO3YzZlNzEyZjhh" }, 'https://cdn.svgator.com/ply/', '__SVGATOR_PLAYER__', window, document, 'script', 'http://www.w3.org/2000/svg', 'http://www.w3.org/1999/xlink')</script>

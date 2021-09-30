@@ -2031,6 +2031,7 @@ p {
 
 .intro__content {
   grid-area: 1/1/1/5;
+  z-index: 1;
 }
 
 .intro__title {
@@ -2125,6 +2126,22 @@ p {
   font-size: 1rem;
   color: var(--white);
   text-transform: uppercase;
+}
+
+.intro__circle {
+  position: absolute;
+  bottom: 5.3125rem;
+  left: 16.25rem;
+  width: clamp(20rem, 24vw, 30rem);
+  height: clamp(20rem, 24vw, 30rem);
+  background-color: var(--heaven-blue);
+  filter: blur(200px);
+}
+
+.intro__star {
+  position: absolute;
+  bottom: 4.0625rem;
+  left: 16.3125rem;
 }
 
 .about {
