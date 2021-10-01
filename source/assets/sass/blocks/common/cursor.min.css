@@ -1,0 +1,1 @@
+.cursor{position:fixed;left:0;top:0;pointer-events:none;will-change:transform;width:12px;height:12px;border-radius:50%;transform:translate(-50%, -50%);border:1px solid var(--main-orange);z-index:10000}
