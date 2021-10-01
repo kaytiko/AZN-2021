@@ -15,9 +15,12 @@
       //opacity: 0;
   }
 
-  &__transparent {}
+  &__transparent {
+    opacity: none;
+  }
 
   &__circle {
-      
+      width: 100px;
+      height: 100px;
   }
 }
