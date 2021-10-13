@@ -1,0 +1,32 @@
+.design-principles {
+    padding: rem(80px) 0 0;
+        
+    @include tablet {
+        padding: rem(120px) 0 0;
+    } 
+
+    &__list {
+        padding: rem(80px) 0 0;
+
+        @include tablet {
+            padding: rem(100px) 0 0;
+        }
+    }
+
+    &__item {
+        padding: rem(80px) 0;
+        border-bottom: 1px solid var(--text-color);
+
+        @include tablet {
+            padding: rem(100px) 0;
+        }
+    }
+
+    &__title {
+        padding: 0 0 rem(40px) 0;
+
+        @include tablet {
+            padding: 0 0 rem(70px) 0;
+        }
+    }
+}

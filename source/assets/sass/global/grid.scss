@@ -9,6 +9,7 @@ $screen-xxl:                  1800px !default;
 $width-container: 1500px;
 $width-container-small: 1160px;
 
+$big-decktop-padding: 40px;
 $decktop-padding: 20px;
 $tablet-padding: 30px;
 $small-padding: 20px;
@@ -118,9 +119,14 @@ $grid-gap: 40px;
     @media (min-width: $screen-md) {
       @include make-wrapper($width-container, $tablet-padding);
     }
+
     @media (min-width: $screen-xl) {
       padding: 0 $decktop-padding;
     }
+
+    // @media (min-width: $screen-xxl) {
+    //   @include make-wrapper(100%, $big-decktop-padding);
+    // }
 }
 
 .container {

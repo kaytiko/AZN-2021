@@ -1,0 +1,31 @@
+.services-view {
+    .page__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: rem(40px);
+
+        @include tablet {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .page__list-number {
+        grid-column: span 4;
+        @include tablet {
+            grid-column: 1/2;
+        }
+    }
+
+    .page__list-title {
+        grid-column: span 4;
+        @include tablet {
+            grid-column: 2/3;
+        }
+    }
+
+    .services-view__intro {
+        grid-column: span 4;
+        @include tablet {
+            grid-column: 3/5;
+        }
+    }
+}

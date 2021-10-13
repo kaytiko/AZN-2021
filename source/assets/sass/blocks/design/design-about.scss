@@ -1,0 +1,22 @@
+.design-about {
+    &__intro {
+        padding: rem(50px) 0 0;
+    }
+
+    .analytics-about__content {
+        padding: rem(50px) 0 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20px);
+
+        padding: rem(40px) 0;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            padding: rem(100px) 0;
+        }
+    }
+}

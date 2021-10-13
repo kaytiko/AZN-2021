@@ -25,6 +25,10 @@
             flex-wrap: nowrap;
             gap: 20vw;
         }
+
+        @include bgdesktop {
+            gap: 15vw;
+        }
     }
 
     &__info, 

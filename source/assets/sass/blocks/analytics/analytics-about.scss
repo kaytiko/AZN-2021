@@ -1,7 +1,7 @@
 .analytics-about {
     &__block {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
         gap: rem(40px);
@@ -9,7 +9,9 @@
     }
 
     &__content {
-        max-width: 50vw;
+        @include tablet {
+            max-width: 47.5vw;
+        }
     }
 
     &__item {

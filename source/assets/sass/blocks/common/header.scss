@@ -6,8 +6,18 @@
 
     &__wrapper {
         padding: 0 rem(20px);
+        max-width: rem(1500px);
+        margin: auto;
 
         @include tablet {
+            padding: 0 rem(30px);
+        }
+
+        @include desktop {
+            padding: 0 rem(20px);
+        }
+
+        @include bgdesktop {
             padding: 0 rem(40px);
         }
     }
@@ -37,6 +47,10 @@
 
     &__logo {
         margin-right: auto;
+
+        &--white {
+            display: none;
+        }
     }
 
     &__list {
@@ -73,5 +87,15 @@
     &__link {
         color: var(--white);
         text-transform: uppercase;
+    }
+}
+
+.logo--white {
+    .header__logo {
+        display: none;
+    }
+
+    .header__logo--white {
+        display: block;
     }
 }
