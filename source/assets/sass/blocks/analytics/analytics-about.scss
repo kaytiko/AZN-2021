@@ -1,0 +1,19 @@
+.analytics-about {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(40px);
+        padding: rem(70px) 0 0;
+    }
+
+    &__content {
+        max-width: 50vw;
+    }
+
+    &__item {
+        padding: rem(25px) 0;
+        border-bottom: 1px solid var(--white);
+    }
+}

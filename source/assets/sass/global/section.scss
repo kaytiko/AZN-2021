@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
 .section {
     &--standart {
         padding: rem(80px) 0;
@@ -17,6 +22,31 @@
             padding: rem(120px) 0 rem(180px) 0;
         } 
     }
+
+    &--border {
+        border-bottom: 1px solid rgba(white, 0.6);
+    }
+
+    &--white {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    &--dark-gray {
+        background-color: var(--dark-gray);
+    }
+
+    &--orange {
+        background-color: var(--main-orange);
+    }
+
+    &--dark-blue {
+        background-color: var(--background-blue);
+    }
+
+    &--heaven-blue {
+        background-color: var(--heaven-blue);
+    }
 }
 
 @for $i from 1 through 7 {
@@ -24,13 +54,13 @@
       margin-top: #{$i}rem;
     }
     .margin-bottom-#{$i}x {
-        margin-top: #{$i}rem;
+        margin-bottom: #{$i}rem;
     }
     .padding-top-#{$i}x {
-        margin-top: #{$i}rem;
+        padding-top: #{$i}rem;
     }
     .padding-bottom-#{$i}x {
-        margin-top: #{$i}rem;
+        padding-bottom: #{$i}rem;
     }
 }
 
@@ -52,10 +82,10 @@
             margin-bottom: #{$i}rem;
         }
         .small-padding-top-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-top: #{$i}rem;
         }
         .small-padding-bottom-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-bottom: #{$i}rem;
         }
     }
 }
@@ -69,10 +99,10 @@
             margin-bottom: #{$i}rem;
         }
         .medium-padding-top-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-top: #{$i}rem;
         }
         .medium-padding-bottom-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-bottom: #{$i}rem;
         }
     }
 }
@@ -86,10 +116,10 @@
             margin-bottom: #{$i}rem;
         }
         .large-padding-top-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-top: #{$i}rem;
         }
         .large-padding-bottom-#{$i}x {
-            margin-top: #{$i}rem;
+            padding-bottom: #{$i}rem;
         }
     }
 }

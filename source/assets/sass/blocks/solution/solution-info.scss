@@ -1,0 +1,61 @@
+.solution-info {
+    &__title {
+        font-size: clamp(1.75rem, calc(.775rem + 6.875vw), 9.625rem);
+    }
+
+    .product-info__header {
+        border-color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .product-info__text {
+        max-width: rem(550px);
+    }
+
+    .product-info__comment {
+        margin: rem(70px) 0 0;
+
+        a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+    }
+
+    &__image {
+        padding: rem(30px) 0 0;
+
+        @include tablet {
+            padding: rem(60px) 0 0;
+        }
+    }
+
+    &__banner {
+        padding: rem(30px) rem(16px);
+        border-radius: rem(20px);
+        text-align: center;
+        background-color: var(--heaven-blue);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        a {
+            color: var(--white);
+        }
+
+        &:hover {
+            background-color: var(--bright-blue);
+
+            a {
+                color: var(--white);
+            }
+        }
+    }
+
+    &__note {
+        @include tablet {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.services-work {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: rem(40px);
+        }
+    }
+}

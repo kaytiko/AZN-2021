@@ -1,17 +1,5 @@
-.clients {
+.clients-main {
     border-top: 1px solid rgba(white, 0.6);
-
-    &__wrapper {     
-    }
-
-    &__container {  
-    }
-
-    &__subtitle {
-    }
-
-    &__title {
-    }
 
     &__info {
         padding: rem(60px) 0 0;
@@ -19,9 +7,6 @@
         @include tablet {
             padding: rem(120px) 0 0;
         }
-    }
-
-    &__info-list {
     }
 
     &__info-item {
@@ -43,8 +28,5 @@
     &__info-link {
         font-family: var(--helvetica);
         color: var(--white);
-    }
-
-    &__info-icon {
     }
 }

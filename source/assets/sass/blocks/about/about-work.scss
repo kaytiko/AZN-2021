@@ -1,0 +1,10 @@
+.about-work {
+    &__button {
+        margin: auto;
+        
+        @include tablet {
+            position: sticky!important;
+            top: rem(16px);
+        }
+    }
+}

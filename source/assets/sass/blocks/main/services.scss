@@ -1,5 +1,17 @@
 .services {
     &__wrapper {
+        
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__subtitle {
+    }
+
+    &__ticker {
         padding: 0 rem(20px);
 
         @include tablet {
@@ -7,14 +19,13 @@
         }
     }
 
-    &__container {
-    }
-
-    &__subtitle {
-    }
-
     &__titles {
-        padding: rem(160px) 0 rem(180px) 0;
+        overflow: hidden;
+        padding: rem(30px) 0 rem(100px) 0;
+
+        @include tablet {
+            padding: rem(160px) 0 rem(120px) 0;
+        }
     }
 
     &__list {

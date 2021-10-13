@@ -15,6 +15,16 @@
     }
 
     &__button {
+        grid-column: span 4;
+        display: flex;
+        justify-content: center;
+        margin: rem(56px) 0 0;
+    }
+
+    &__button-angle {}
+    &__button-text {
+        transform-origin: center;
+        animation: rotate 12s linear infinite;
     }
 
     &__button-inner {

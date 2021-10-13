@@ -1,0 +1,29 @@
+.toggle {
+    width: rem(70px);
+    height: rem(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+
+    &__top, &__bottom {
+        width: rem(70px);
+        height: rem(1px);
+        background-color: var(--white);
+        transition: width 0.3s ease-in;
+    }
+
+    &__top {
+        align-self: flex-start;
+    }
+
+    &:hover {
+        .toggle__top {
+            width: rem(50px);
+        }
+        .toggle__bottom {
+            width: rem(50px);
+        }
+    }
+}

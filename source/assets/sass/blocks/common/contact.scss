@@ -1,0 +1,19 @@
+.contact {
+    &__subtitle {
+        max-width: rem(200px);
+        display: block;
+    }
+
+    &__title {
+        font-size: clamp(1.75rem, calc(.775rem + 4.875vw),6.625rem);
+        line-height: 1;
+    }
+
+    &__block {
+        padding: rem(100px) 0 0;
+
+        @include tablet {
+            padding: rem(160px) 0 0; 
+        }
+    }
+}

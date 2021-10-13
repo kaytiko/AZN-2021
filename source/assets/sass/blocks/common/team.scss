@@ -1,0 +1,32 @@
+.team {
+    padding: rem(80px) 0 rem(80px);
+
+    @include tablet {
+        padding: rem(120px) 0 rem(100px);
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: rem(40px);
+        
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__author {
+        margin: rem(24px) 0 0;
+    }
+
+    &__link {
+        &:hover {
+            color: var(--white);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.about-principles {
+    &__intro {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: rem(80px) 0 0;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: rem(120px);
+            grid-row-gap: rem(30px);
+        }
+    }
+
+    &__item {
+        padding: rem(16px) 0;
+        border-top: 1px solid var(--white);
+
+        &:last-of-type {
+            border-bottom: 1px solid var(--white);
+
+            @include tablet {
+                border: none;
+            }
+        }
+
+        @include tablet {
+            border: none;
+            padding: 0;
+        }
+    }
+}

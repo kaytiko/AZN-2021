@@ -12,3 +12,6 @@ source/css/*.css
 source/css/*.map
 build/
 Thumbs.db
+package-lock.json
+package.json
+gulpfile.js

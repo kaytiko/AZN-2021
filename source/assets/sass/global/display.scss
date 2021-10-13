@@ -3,8 +3,14 @@
     flex: 0 1 auto;
 }
 
-.fle--wrap {
+.flex--wrap {
     flex-wrap:wrap;
+}
+
+@for $i from 1 through 7 {
+    .gap-#{$i}x {
+        gap: #{$i}rem;
+    }
 }
 
 @for $i from 1 through 7 {
@@ -20,10 +26,38 @@
 }
 
 @include mobile {
-    @for $i from 1 through 12 {
-        .small-#{ nth(null flex-column flex-column--reverse j--start j--end j--cener a-items--start a-items--center a-items--end wrap order-1 order-2, $i % 12 + 1) } { 
-            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap order order, $i % 12 + 1)}: 
-            #{ nth(null column column-reverse flex-start flex-end flex-center flex-start center flex-end wrap 1 2, $i % 12 + 1) };
+    @for $i from 1 through 13 {
+        .small-#{ nth(null flex-column flex-column--reverse j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 13 + 1) } { 
+            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 13 + 1)}: 
+            #{ nth(null column column-reverse flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 13 + 1) };
         } 
+    }
+}
+
+@include tablet {
+    @for $i from 1 through 13 {
+        .middle-#{ nth(null flex-column flex-column--reverse j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 13 + 1) } { 
+            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 13 + 1)}: 
+            #{ nth(null column column-reverse flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 13 + 1) };
+        } 
+    }
+}
+
+@include mobile {
+    @for $i from 1 through 7 {
+        .small-gap-#{$i}x {
+            gap: #{$i}rem;
+        }
+    }
+}
+
+@include tablet {
+    @for $i from 1 through 7 {
+        .middle-gap-#{$i}x {
+            gap: #{$i}rem;
+        }
+    }
+    .middle-gap-0x {
+        gap: 0;
     }
 }

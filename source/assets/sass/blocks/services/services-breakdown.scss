@@ -1,0 +1,30 @@
+.service-breakdown {
+    border-bottom: 1px solid var(--white);
+
+    &__container {
+        padding: rem(65px) 0;
+    }
+
+    &__ticker {
+        padding: rem(15px) 0;
+        overflow: hidden;
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+
+    &__list {
+        display: flex;
+        animation: ticker-left 70s linear infinite;
+    }
+
+    &__item {
+        padding: 0 0 0 rem(15px);
+        color: var(--main-orange);
+    }
+
+    &__title {
+        span {
+            color: var(--main-orange);
+        }
+    }
+}

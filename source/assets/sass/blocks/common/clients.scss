@@ -1,0 +1,70 @@
+.clients {
+    &__wrapper {
+        padding: 0 rem(20px) 0 0;
+        @include tablet {
+            padding: 0;
+        }
+    }
+    
+    &__title {
+        overflow: hidden;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+
+        @include tablet {
+            flex-direction: row;
+
+            &:not(:first-child) {
+                padding: rem(60px) 0 rem(65px) 0;
+            }
+
+            &:first-of-type:hover,
+            &:nth-of-type(2):hover,
+            &:last-of-type:hover {
+                animation-play-state: paused;
+            }
+    
+            &:first-of-type {
+                flex-direction: row;
+                animation: ticker-left 70s linear infinite;
+                padding: rem(32px) 0 rem(65px) 0;
+            }
+    
+            &:nth-of-type(2) {
+                animation: ticker-right 70s linear infinite;
+            }
+
+            &:last-of-type {
+                animation: ticker-left 50s linear infinite;
+            }
+
+            &::after {
+                content: '';
+                width: 400%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color: white;
+            }
+        }
+    }
+
+    &__item {
+        padding: rem(16px) 0;
+
+        @include tablet {
+            margin: 0 rem(50px) 0 0;
+            padding: 0;
+        }
+    }
+
+    &__link {
+        color: var(--white);
+    }
+}

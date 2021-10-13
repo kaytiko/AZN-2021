@@ -2,6 +2,10 @@
     height: 100vh;
     display: flex;
 
+    @include tablet {
+        min-height: rem(600px);
+    }
+
     &__wrapper {
     }
 
@@ -60,12 +64,16 @@
     }
 
     &__social {
-        display: flex;
+        display: none;
         position: fixed;
         bottom: rem(30px);
         left: 0;
         width: 100%;
         mix-blend-mode: difference;
+
+        @include tablet {
+            display: flex;
+        }
     }
 
     &__block {
@@ -83,7 +91,11 @@
     }
 
     &__social-item {
-        padding: 0 rem(40px) 0 0;
+        padding: 0 rem(20px) 0 0;
+
+        @include tablet {
+            padding: 0 rem(40px) 0 0;
+        }
     }
 
     &__social-link {
@@ -102,18 +114,15 @@
 
     &__circle {
         position: absolute;
-        //bottom: rem(85px);
-        //left: rem(260px);
         width: clamp(rem(320px), 24vw, rem(480px));
         height: clamp(rem(320px), 24vw, rem(480px));
 
         background-color: var(--heaven-blue);
-        filter: blur(200px);
+        filter: blur(150px);
     }
 
     &__star {
         position: absolute;
-        //bottom: rem(65px);
-        //left: rem(261px);
+        display: none;
     }
 }

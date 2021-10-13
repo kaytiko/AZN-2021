@@ -10,16 +10,48 @@
 @import "global/form.scss";
 @import "global/animation.scss";
 @import "global/fonts.scss";
+@import "global/table.scss";
 
+@import "blocks/common/footer.scss";
+@import "blocks/common/header.scss";
 @import "blocks/common/header-main.scss";
 @import "blocks/common/footer-main.scss";
 @import "blocks/common/privacy.scss";
 @import "blocks/common/social.scss";
 @import "blocks/common/cursor.scss";
+@import "blocks/common/toggle.scss";
+@import "blocks/common/page.scss";
+@import "blocks/common/video.scss";
+@import "blocks/common/team.scss";
+@import "blocks/common/contact.scss";
+@import "blocks/common/clients.scss";
+@import "blocks/common/work.scss";
+@import "blocks/common/accordion.scss";
 
 
 @import "blocks/main/intro.scss";
 @import "blocks/main/about.scss";
 @import "blocks/main/services.scss";
-@import "blocks/main/clients.scss";
+@import "blocks/main/clients-main.scss";
 @import "blocks/main/best-products.scss";
+
+
+@import "blocks/about/about-work.scss";
+@import "blocks/about/about-benefits.scss";
+@import "blocks/about/about-principles.scss";
+@import "blocks/about/about-reviews.scss";
+@import "blocks/about/about-history.scss";
+@import "blocks/about/about-contact.scss";
+
+@import "blocks/services/services-separator.scss";
+@import "blocks/services/services-work.scss";
+@import "blocks/services/services-breakdown.scss";
+@import "blocks/services/services-circle.scss";
+
+@import "blocks/solution/solution-slider.scss";
+@import "blocks/solution/solution-info.scss";
+
+@import "blocks/consulting/consulting-step.scss";
+
+@import "blocks/analytics/analytics-about.scss";
+@import "blocks/analytics/analytics-clients.scss";

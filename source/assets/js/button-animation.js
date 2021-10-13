@@ -5,5 +5,7 @@ function buttonSplit (button) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    buttonSplit('.link-animate');
+    if (window.matchMedia("(min-width:720px)").matches){
+        buttonSplit('.link-animate');
+    }
 })

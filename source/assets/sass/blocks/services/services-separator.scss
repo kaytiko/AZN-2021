@@ -1,0 +1,26 @@
+.services-separator {
+    padding: rem(80px) 0 0;
+
+    @include tablet {
+        padding: rem(120px) 0 0;
+    }
+    
+    &__container {
+        display: flex;
+        gap: rem(50px);
+        margin: 0 0 rem(30px);
+    }
+
+    &__title {
+        font-size: clamp(1.75rem, calc(0.7750rem + 6.8750vw), 9.625rem);
+        line-height: 0.8;
+
+        span {
+            margin: 0;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+    }    
+}
