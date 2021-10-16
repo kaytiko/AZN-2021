@@ -1,0 +1,15 @@
+.team-intro {
+    height: auto;
+
+    &__title {
+        margin-bottom: 0;
+    }
+    
+    &__info {
+        font-size: rem(24px);
+    }
+
+    &--big {
+        min-height: rem(700px);
+    }
+}

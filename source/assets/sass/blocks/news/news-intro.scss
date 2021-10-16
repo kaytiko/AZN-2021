@@ -1,0 +1,109 @@
+.news-intro {
+    display: flex;
+    align-items: center;
+    min-height: rem(600px);
+    height: 100vh;
+
+    &__title {
+        grid-column: span 4;
+        color: var(--white);
+        -webkit-text-stroke: 0;
+        text-stroke: 0;
+        white-space: normal;
+        text-align: left;
+
+        @include tablet {
+            grid-column: 2/5;
+            margin: rem(200px) 0 rem(280px) 0;
+        }
+    }
+
+    &__footer {
+        grid-column: span 4;
+        border-top: 1px solid var(--text-color);
+
+        @include tablet {
+            grid-column: 2/5;
+        }
+
+        &--circle {
+            @include tablet {
+                position: relative;
+
+                &::after {
+                    @include pseudo-element();
+                    top: rem(13px);
+                    right: 0;
+                    width: rem(10px);
+                    height: rem(10px);
+                    border-radius: 50%;
+                    background-color: var(--main-orange);
+                }
+            }
+        }
+    }
+
+    &__list {
+        padding: rem(15px) 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        padding: rem(15px) 0;
+        border-bottom: 1px solid var(--text-color);
+        width: 100%;
+
+        @include tablet {
+            margin: 0 rem(30px) 0 0;
+            padding: 0;
+            border: none;
+            width: auto;
+        }
+    }
+
+    &__text {
+        grid-column: span 4;
+
+        @include tablet {
+            grid-column: 2/5;
+            padding: 0 0 rem(250px) 0;
+            font-size: rem(22px);
+        }
+    }
+
+    &__image {
+        width: rem(40px);
+        height: rem(40px);
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 rem(15px) 0 0;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.news-intro--post {
+    height: 70vh;
+
+    .news-intro__title {
+        @include tablet {
+            margin: rem(200px) 0 0 0;
+        }
+    }
+    .news-intro__block {
+        span {
+            &:first-child {
+                padding: 0 0 rem(5px) 0;
+            }
+        }
+    }
+}

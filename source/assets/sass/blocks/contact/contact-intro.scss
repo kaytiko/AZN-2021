@@ -1,0 +1,103 @@
+.contact-intro {
+    display: flex;
+    align-items: center;
+    min-height: rem(600px);
+    height: 80vh;
+
+    &__title {
+        color: var(--white);
+        -webkit-text-stroke: 0;
+        text-stroke: 0;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+.form {
+    &__group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        top: calc(50% - 18px);
+        left: calc(50% - 64px);
+        transition: all 0.3s ease-in-out;
+        font-size: rem(24px);
+    }
+
+    &__input {
+        background: none;
+        outline: none;
+        border: none;
+        border-top: 1px solid var(--text-color);
+        border-bottom: 1px solid var(--text-color);
+        color: var(--text-color);
+        font-size: rem(24px);
+        text-align: center;
+        padding: rem(35px) 0 rem(40px);
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(34px) 0 0;
+    }
+
+    &__progress {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        width: rem(50px);
+        height: rem(6px);
+        border-radius: rem(5px);
+        background-color: var(--text-color);
+        margin: 0 rem(10px) 0 0;
+
+        &::after {
+            @include pseudo-element();
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            border-radius: rem(5px);
+            background: var(--main-orange);
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &--check {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+    top: calc(50% - 43px);
+    left: calc(50% - 47px);
+    font-size: rem(16px);
+}

@@ -1,0 +1,49 @@
+.news-post {
+    &__body {
+        grid-column: span 4;
+
+        @include tablet {
+            grid-column: 2/5;
+        }
+    }
+
+    &__image {
+        padding: 0 0 rem(40px) 0;
+        width: 100%;
+        
+        @include tablet {
+            padding: rem(50px) 0 rem(70px) 0;
+        }
+    }
+
+    &__footer {
+        grid-column: span 4;
+        margin: rem(80px) 0 0;
+        padding: rem(35px) 0;
+        border-top: 1px solid var(--text-color);
+        border-bottom: 1px solid var(--text-color);
+
+        @include tablet {
+            grid-column: 2/5;
+            margin: rem(170px) 0 0;
+        }
+    }
+
+    &__link {
+        svg {
+            margin: 0 0 0 rem(8px);
+        }
+    }
+
+    p {
+        margin: 0 0 rem(50px) 0;
+    }
+    
+    h2, h3 {
+        margin: 0 0 rem(30px) 0;
+    }
+
+    blockquote {
+        margin: 0 0 rem(50px) 0;
+    }
+}

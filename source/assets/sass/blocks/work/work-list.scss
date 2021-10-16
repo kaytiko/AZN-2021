@@ -1,0 +1,15 @@
+.work-list {
+    .page__table {
+        margin: 0;
+    }
+
+    .page__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: rem(40px);
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr rem(200px) 1fr;
+        }
+    }
+}
