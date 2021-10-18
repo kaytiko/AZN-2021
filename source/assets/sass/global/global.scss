@@ -102,9 +102,10 @@ h1, h2 {
 }
 
 h1 {
-  font-size: clamp(2.625rem, calc(2.1245rem + 3.1775vw), 5.9375rem);
+  font-size: clamp(2rem, calc(1.2125rem + 3.9375vw), 5.9375rem);
   line-height: 0.9;
   font-weight: 400;
+  word-wrap: break-word;
 }
 
 h2 {
