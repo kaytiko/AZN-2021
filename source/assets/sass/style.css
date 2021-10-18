@@ -3707,7 +3707,7 @@ table th {
 }
 
 .about-benefits__info {
-  max-width: 35rem;
+  max-width: 35vw;
 }
 
 .about-benefits__image {
@@ -3737,7 +3737,7 @@ table th {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 7.5rem;
-    grid-row-gap: 1.875rem;
+    grid-row-gap: 5rem;
   }
 }
 
@@ -3805,7 +3805,7 @@ table th {
 }
 
 .services-separator__title {
-  font-size: clamp(1.75rem, calc(0.7750rem + 6.8750vw), 9.625rem);
+  font-size: clamp(1.75rem, calc(0.7750rem + 5.8750vw), 8.625rem);
   line-height: 0.8;
 }
 
@@ -3831,12 +3831,12 @@ table th {
   }
 }
 
-.service-breakdown {
-  border-bottom: 1px solid var(--white);
-}
-
 .service-breakdown__container {
   padding: 4.0625rem 0;
+}
+
+.service-breakdown__container:last-child {
+  border-bottom: 1px solid var(--white);
 }
 
 .service-breakdown__ticker {
@@ -4039,7 +4039,7 @@ table th {
 
 @media (min-width: 768px) {
   .solution-info .product-info__text {
-    max-width: 40vw;
+    max-width: 35vw;
   }
 }
 
@@ -4088,6 +4088,16 @@ table th {
   .solution-info__note {
     text-align: right;
   }
+}
+
+@media (min-width: 1800px) {
+  .solution-benefits__info {
+    max-width: 35vw;
+  }
+}
+
+.solution-benefits img {
+  width: 100%;
 }
 
 .consulting-step__list {
@@ -4310,6 +4320,18 @@ table th {
   .news-intro__title {
     grid-column: 2/5;
     margin: 28vh 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-intro__title {
+    margin: 24vh 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .news-intro__title {
+    margin: 20vh 0;
   }
 }
 

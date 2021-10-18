@@ -17,6 +17,14 @@
             // margin: rem(200px) 0 rem(280px) 0;
             margin: 28vh 0;
         }
+
+        @include desktop {
+            margin: 24vh 0;
+        }
+
+        @include bgdesktop {
+            margin: 20vh 0;
+        }
     }
 
     &__footer {

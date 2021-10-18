@@ -7,7 +7,7 @@ const htmlmin = require("gulp-htmlmin");
 const rigger = require('gulp-rigger');
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass');
 // (require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");

@@ -1,8 +1,10 @@
 .service-breakdown {
-    border-bottom: 1px solid var(--white);
-
     &__container {
         padding: rem(65px) 0;
+
+        &:last-child {
+            border-bottom: 1px solid var(--white);
+        }
     }
 
     &__ticker {

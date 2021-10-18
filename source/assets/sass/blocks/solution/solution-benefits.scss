@@ -1,0 +1,11 @@
+.solution-benefits {
+    &__info {
+        @include bgdesktop {
+            max-width: 35vw;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
