@@ -1,0 +1,23 @@
+{
+  "short_name": "AZNReseacrh",
+  "name": "AZNResearch corporate website",
+  "description": "AZNResearch corporate website",
+  "icons": [
+    {
+      "src": "/img/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "698x698",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/img/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#0E1B24",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#2A60FE"
+}
