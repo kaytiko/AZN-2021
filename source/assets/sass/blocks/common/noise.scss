@@ -1,0 +1,18 @@
+/* Шум на странице */
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/depositphotos_23860005-stock-illustration-seamless-texture-with-noise-effect.jpg");
+    background-size: rem(160px);
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: soft-light;
+    opacity: 0.1;
+    animation: noise 0.3s steps(1, start) infinite;
+}

@@ -14,16 +14,9 @@
 
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
-    <script src="js/ticker.min.js"></script>
-    <script src="js/button-animation.min.js"></script>
-    <script src="js/parallax.min.js"></script>
 </head>
 
 <body class="main">
-    <div style="display: none;">
-        <include src="build/img/sprite.svg"></include>
-    </div>
-
     <div class="cursor not-active" id="cursor">
         <div class="cursor__inner">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +30,7 @@
             </svg>
         </div>
     </div>
-
+    <div class="noise"></div>
     <header class="header header--main">
         //= common/header-main.html
     </header>
@@ -103,7 +96,7 @@
                         <h2 class="about__title page__title text--uppercase">Проектируем бренды, разрабатываем
                             веб-сайты, создаем приложения, обучаем команды и многое другое</h2>
                     </div>
-                    <a class="about__button" title="About page">
+                    <a class="about__button magnetic-element" title="About page">
                         <svg width="238" height="238" viewBox="0 0 238 238" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g class="about__button-angle">
@@ -455,7 +448,7 @@
                         <!--Желательно загрузить 4-5 размеров в picture-->
                         <img src="/img/cis_image.jpg" alt="Vieo about customer intelligence suite" width="1160"
                             height="630">
-                        <div class="video-button">
+                        <div class="video-button magnetic-element">
                             <svg width="206" height="206" viewBox="0 0 206 206" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g class="video-button__angle">
@@ -607,108 +600,15 @@
     <footer class="footer footer--main">
         //= common/footer-main.html
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cursor = document.querySelector('#cursor');
-            let transparentCursor = document.querySelectorAll('.transparent-cursor');
-
-            transparentCursor.forEach(elm => {
-                elm.addEventListener("mouseover", function () {
-                    cursor.classList.add("cursor--transparent");
-                });
-                elm.addEventListener("mouseleave", function () {
-                    cursor.classList.remove("cursor--transparent");
-                });
-            });
-
-            let mouse = { x: 300, y: 300 };
-            let pos = { x: 0, y: 0 };
-            const speed = 0.1; // between 0 and 1
-
-            const updatePosition = () => {
-                pos.x += (mouse.x - pos.x) * speed;
-                pos.y += (mouse.y - pos.y) * speed;
-                cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
-            };
-
-            const updateCoordinates = e => {
-                mouse.x = e.clientX;
-                mouse.y = e.clientY;
-            }
-
-            window.addEventListener('mousemove', updateCoordinates);
-
-            function loop() {
-                updatePosition();
-                requestAnimationFrame(loop);
-            }
-
-            requestAnimationFrame(loop);
-
-
-            // class Cursor {
-            //     constructor(el, target) {
-            //         this.el = el;
-            //         this.target = target;
-            //         this.triggerDistance = 90;
-
-            //         this.bind();
-            //     }
-
-            //     bind() {
-            //         window.addEventListener('mousemove', this.move.bind(this), false);
-            //     }
-
-            //     move(e) {
-            //         const cursorPosition = {
-            //             left: e.clientX,
-            //             top: e.clientY
-            //         }
-
-            //         const targetPosition = {
-            //             left: this.target.getBoundingClientRect().left + this.target.getBoundingClientRect().width / 2,
-            //             top: this.target.getBoundingClientRect().top + this.target.getBoundingClientRect().height / 2,
-            //         }
-
-            //         const distance = {
-            //             x: targetPosition.left - cursorPosition.left,
-            //             y: targetPosition.top - cursorPosition.top
-            //         }
-
-            //         const angle = Math.atan2(distance.x, distance.y);
-            //         const hypotenuse = Math.sqrt(distance.x * distance.x + distance.y * distance.y);
-
-            //         if (hypotenuse < this.triggerDistance) {
-            //             this.el.classList.add('cursor--expanded');
-            //             this.el.classList.remove('not-active');
-            //             this.target.classList.add('cursor--expanded');
-
-            //             TweenMax.to(this.el, 0.3, {
-            //                 left: targetPosition.left - Math.sin(angle) * hypotenuse / 5,
-            //                 top: targetPosition.top - Math.cos(angle) * hypotenuse / 5
-            //             })
-            //         } else {
-            //             this.el.classList.add('not-active');
-            //             this.el.classList.remove('cursor--expanded');
-            //             this.target.classList.remove('cursor--expanded');
-
-            //             TweenMax.to(this.el, 0.3, {
-            //                 left: cursorPosition.left,
-            //                 top: cursorPosition.top
-            //             })
-            //         }
-            //     }
-            // }
-
-            // const element = document.querySelector("#cursor");
-            // const target = document.querySelector("#toggle");
-            // const cursor = new Cursor(element, target);
-        })
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script xmlns:ns1="http://www.w3.org/1999/xlink" ns1:href="https://cdn.svgator.com/ply/5c7f360c.js"
         src="https://cdn.svgator.com/ply/5c7f360c.js"></script>
     <script>(function (s, i, u, o, w, d, t, n, x, e, p) { w[o] = w[o] || {}; w[o][s] = w[o][s] || []; w[o][s].push(i); e = d.createElementNS(n, t); e.async = true; e.setAttributeNS(x, 'href', [u, s, '.', 'j', 's'].join('')); e.setAttributeNS(null, 'src', [u, s, '.', 'j', 's'].join('')); p = d.getElementsByTagName(t)[0]; p.parentNode.insertBefore(e, p); })('5c7f360c', { "root": "enW5xMsTYq11", "animations": [{ "elements": { "enW5xMsTYq12": { "transform": { "data": { "r": 180, "t": { "x": 371, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 742, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 631, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 742, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq13": { "transform": { "data": { "r": 180, "t": { "x": 334, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 668, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 668, "y": 224, "type": "corner" } }] } } }, "enW5xMsTYq14": { "transform": { "data": { "r": 180, "t": { "x": 297, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 557, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 594, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq17": { "transform": { "data": { "r": 180, "t": { "x": 149, "y": 112 } }, "keys": { "o": [{ "t": 100, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1900, "v": { "x": 298, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq18": { "transform": { "data": { "r": 180, "t": { "x": 186, "y": 112 } }, "keys": { "o": [{ "t": 200, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 409, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1800, "v": { "x": 372, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }] } } }, "enW5xMsTYq19": { "transform": { "data": { "r": 180, "t": { "x": 112, "y": 112 } }, "keys": { "o": [{ "t": 0, "v": { "x": 224, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 1000, "v": { "x": 335, "y": 224, "type": "corner" }, "e": [0.42, 0, 0.58, 1] }, { "t": 2000, "v": { "x": 224, "y": 224, "type": "corner" } }] } } } }, "s": "MODA1M2IyNTk5YmFjYTVk5OGFiYTBCYTZhNTUJ5NzFVNmE2N1A2NzY3SNjNNNTlDOWJhMGE5OHWM5YWFiYTBhNmE1NTXk3MTY4NjM1OWEwSGFTiOWNhOTk4YWJhMGE2BYTVhYTU5NzFVNjc2MSzU5OWRhMGEzYTM1OTIcxNjg2MzU5TDk4YTNNhYjljYTlKYTU5OGFiXOWM1OTcxOWQ5OGEzYAWE5Y0s2MzU5YWFhNzNljOWM5YjU5NzE2OGIL0" }], "options": "MTDAxMDg4MmY4MDgxNmCU3ZjgxMmY0NzJmNzkO3YzZlNzEyZjhh" }, 'https://cdn.svgator.com/ply/', '__SVGATOR_PLAYER__', window, document, 'script', 'http://www.w3.org/2000/svg', 'http://www.w3.org/1999/xlink')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+    <script defer src="js/magnetic-button.min.js"></script>
+    <script defer src="js/ticker.min.js"></script>
+    <script src="js/parallax.min.js"></script>
 </body>
 
 </html>

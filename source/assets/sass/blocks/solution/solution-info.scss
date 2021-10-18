@@ -4,7 +4,7 @@
     }
 
     .product-info__header {
-        border-color: var(--white);
+        border-color: var(--text-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,7 +25,7 @@
         margin: rem(70px) 0 0;
 
         a {
-            color: var(--white);
+            color: var(--text-color);
             text-decoration: underline;
         }
     }

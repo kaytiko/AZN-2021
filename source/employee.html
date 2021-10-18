@@ -17,6 +17,11 @@
 </head>
 
 <body class="main main--lined">
+    <div class="cursor not-active" id="cursor">
+        <div class="cursor__inner">
+        </div>
+    </div>
+    <div class="noise"></div>
     <header class="header">
         //= common/header.html
     </header>
@@ -104,7 +109,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="team-contact__block contact__block">
-                            <a href="" class="team-contact__button page__button--main text--uppercase"
+                            <a href="" class="team-contact__button page__button--main text--uppercase magnetic-element"
                         title="Download presentation">Хочу работать с вами</a>
                         </div>
                     </div>
@@ -115,6 +120,10 @@
     <footer class="footer">
         //= common/footer.html
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+    <script src="js/magnetic-button.min.js"></script>
 </body>
 
 </html>

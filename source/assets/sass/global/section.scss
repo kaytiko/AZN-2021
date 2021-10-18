@@ -24,12 +24,7 @@
     }
 
     &--border {
-        border-bottom: 1px solid rgba(white, 0.6);
-    }
-
-    &--white {
-        background-color: var(--white);
-        color: var(--black);
+        border-bottom: 1px solid var(--text-color);
     }
 
     &--dark-gray {

@@ -26,19 +26,19 @@
 }
 
 @include mobile {
-    @for $i from 1 through 13 {
-        .small-#{ nth(null flex-column flex-column--reverse j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 13 + 1) } { 
-            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 13 + 1)}: 
-            #{ nth(null column column-reverse flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 13 + 1) };
+    @for $i from 1 through 14 {
+        .small-#{ nth(null flex-column flex-column--reverse flex-row j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 14 + 1) } { 
+            #{ nth(null flex-direction flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 14 + 1)}: 
+            #{ nth(null column column-reverse row flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 14 + 1) };
         } 
     }
 }
 
 @include tablet {
-    @for $i from 1 through 13 {
-        .middle-#{ nth(null flex-column flex-column--reverse j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 13 + 1) } { 
-            #{ nth(null flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 13 + 1)}: 
-            #{ nth(null column column-reverse flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 13 + 1) };
+    @for $i from 1 through 14 {
+        .middle-#{ nth(null flex-column flex-column--reverse flex-row j--start j--end j--center a-items--start a-items--center a-items--end wrap nowrap order-1 order-2, $i % 14 + 1) } { 
+            #{ nth(null flex-direction flex-direction flex-direction justify-content justify-content justify-content align-items align-items align-items flex-wrap flex-wrap order order, $i % 14 + 1)}: 
+            #{ nth(null column column-reverse row flex-start flex-end center flex-start center flex-end wrap nowrap 1 2, $i % 14 + 1) };
         } 
     }
 }

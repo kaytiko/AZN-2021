@@ -6,7 +6,7 @@
 
     &__title {
         grid-column: span 4;
-        color: var(--white);
+        color: var(--text-color);
         -webkit-text-stroke: 0;
         text-stroke: 0;
         white-space: normal;
@@ -14,7 +14,8 @@
 
         @include tablet {
             grid-column: 2/5;
-            margin: rem(200px) 0 rem(280px) 0;
+            // margin: rem(200px) 0 rem(280px) 0;
+            margin: 28vh 0;
         }
     }
 

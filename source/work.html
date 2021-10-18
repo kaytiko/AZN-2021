@@ -17,6 +17,11 @@
 </head>
 
 <body class="main main--lined">
+    <div class="cursor not-active" id="cursor">
+        <div class="cursor__inner">
+        </div>
+    </div>
+    <div class="noise"></div>
     <header class="header">
         //= common/header.html
     </header>
@@ -207,7 +212,6 @@
             </div>
         </section>
         <section class="work-clients clients section--standart section--border">
-            <!--Заголовка нет у секции, но он добавлен на сохранения html валидации и сео-->
             <h2 class="visually-hidden">Наши клиенты</h2>
             <div class="clients__wrapper wrapper">
                 <div class="clients__container container--grid">
@@ -220,88 +224,38 @@
             <div class="clients__wrapper" id="ticker">
                 <div class="clients__title">
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Napa</a>
                             <div class="clients__logo" style="display: none;"><img src="/img/napa__logo.svg"width="2370" height="1950" alt="Napa"></div>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Labatt</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link" title="Web-design">Air
-                                Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Coca-cola</a>
+                        </li>
                     </ul>
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link" title="Web-design">Air
-                                Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
-                            <div class="clients__logo" style="display: none;"></div>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Air Canada</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link" title="Web-design">Air
-                                Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Ecobank</a>
+                        </li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Diamond Privilege</a>
+                        </li>
                     </ul>
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">UBA</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link" title="Web-design">Air
-                                Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Direct connect</a>
+                        </li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Weyerhaeuser</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -310,7 +264,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="clients__block contact__block"><a href=""
-                                class="clients__button page__button--main text--uppercase"
+                                class="clients__button page__button--main text--uppercase magnetic-element"
                                 title="Download presentation">Хочу работать с вами</a></div>
                     </div>
                 </div>
@@ -344,7 +298,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="work-contact__block contact__block">
-                            <a href="" class="work-contact__button page__button--main text--uppercase"
+                            <a href="" class="work-contact__button page__button--main text--uppercase magnetic-element"
                         title="Download presentation">Хочу работать с вами</a>
                         </div>
                     </div>
@@ -355,6 +309,11 @@
     <footer class="footer">
         //= common/footer.html
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+    <script src="js/magnetic-button.min.js"></script>
+    <script src="js/ticker.min.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
     &__item {
         padding: rem(70px) rem(48px) rem(60px) rem(48px);
         border-radius: rem(16px);
-        border: 1px solid var(--white);
+        border: 1px solid var(--text-color);
 
         display: flex;
         flex-direction: column;
@@ -36,8 +36,12 @@
 
     &__link {
         margin-top: auto;
-        color: var(--white);
+        color: var(--text-color);
         text-transform: uppercase;
+
+        &:hover {
+            color: var(--text-color);
+        }
     }
 
     svg {

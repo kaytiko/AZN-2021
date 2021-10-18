@@ -6,13 +6,6 @@
         min-height: rem(600px);
     }
 
-    &__wrapper {
-    }
-
-    &__container {
-        
-    }
-
     &__content {
         grid-area: 1/1/1/5;
         z-index: 1;
@@ -65,11 +58,10 @@
 
     &__social {
         display: none;
-        position: fixed;
+        position: absolute;
         bottom: rem(30px);
         left: 0;
         width: 100%;
-        mix-blend-mode: difference;
 
         @include tablet {
             display: flex;

@@ -17,6 +17,11 @@
 </head>
 
 <body class="main main--lined">
+    <div class="cursor not-active" id="cursor">
+        <div class="cursor__inner">
+        </div>
+    </div>
+    <div class="noise"></div>
     <header class="header">
         //= common/header.html
     </header>
@@ -29,27 +34,18 @@
                     <p class="solution-intro__text page__text">Наши продукты повышают коэффициент конверсии
                         пользователей до&nbsp;84%</p>
                 </div>
-                <div class="intro__social">
-                    <div class="intro__block">
-                        <ul class="intro__social-list list-style--none">
-                            <li class="intro__social-item transparent-cursor"><a href=""
-                                    class="intro__social-link link-animate" title="AZN Facebook">Facebook</a></li>
-                            <li class="intro__social-item transparent-cursor"><a href=""
-                                    class="intro__social-link link-animate" title="AZN Twitter">Twitter</a></li>
-                        </ul>
-                        <span class="intro__contact">Scroll down</button>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="solution-slider section--border">
             <div class="solution-slider__wrapper wrapper">
                 <div class="solution-slider__container">
+                    <!--Если понадобится инонка - добавьте ее фоном плитки чуть светлее, чем сама страница-->
+                    <!--Абстрактный пример в файле фигмы на странице меню-->
                     <div class="solution-slider__item item">
                         <h3 class="solution-slider__title page__title text--uppercase">Brand Intelligence Suite</h3>
                         <p class="solution-slider__text page__text">Улучшит репутацию бренда, повысит лояльность
                             и&nbsp;доверие клиентов к&nbsp;вашим продуктам и&nbsp;услугам.</p>
-                        <a href="" class="solution-slider__link page__link--arrow">
+                        <a href="" class="solution-slider__link page__link--arrow magnetic-element">
                             Оставить заявку
                             <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +60,7 @@
                         <h3 class="solution-slider__title page__title text--uppercase">Customer Intelligence Suite</h3>
                         <p class="solution-slider__text page__text">CIS собирает, измеряет и&nbsp;мониторит отзывы
                             в&nbsp;любой точке касания с&nbsp;клиентом.</p>
-                        <a href="" class="solution-slider__link page__link--arrow">
+                        <a href="" class="solution-slider__link page__link--arrow magnetic-element">
                             Оставить заявку
                             <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +76,7 @@
                         <p class="solution-slider__text page__text">Анализирует большие данные и&nbsp;помогает бизнесу
                             принимать взвешенные решения: строить гипотезы, запускать продукты, улучшать процессы
                             и&nbsp;планировать развитие.</p>
-                        <a href="" class="solution-slider__link page__link--arrow">
+                        <a href="" class="solution-slider__link page__link--arrow magnetic-element">
                             Оставить заявку
                             <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +163,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--center">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -181,7 +177,7 @@
                             <div class="accordion__item accordion__item--open">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -341,7 +337,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--end">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -354,7 +350,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -427,7 +423,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--end">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -440,7 +436,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -512,7 +508,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--end">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -525,7 +521,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -597,7 +593,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--end">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -610,7 +606,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -689,7 +685,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 flex j--end a-items--end">
-                        <a class="page__button--main sticky" title="Go to contact page">Узнать
+                        <a class="page__button--main magnetic-element" title="Go to contact page">Узнать
                             больше</a>
                     </div>
                     <div class="col-md-4">
@@ -702,7 +698,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <h3 class="accordion__title text--uppercase">Какие проблемы решает</h3>
-                                    <div class="accordion__button">
+                                    <div class="accordion__button target-element">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white" stroke-width="2"/>
                                             <line x1="39.1319" y1="13.208" x2="13.2075" y2="39.1324" stroke="white" stroke-width="2"/>
@@ -784,86 +780,37 @@
             <div class="clients__wrapper" id="ticker">
                 <div class="clients__title">
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Napa</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Labatt</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Air Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Coca-cola</a>
+                        </li>
                     </ul>
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Air Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Air Canada</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Air Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Ecobank</a>
+                        </li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Diamond Privilege</a>
+                        </li>
                     </ul>
                     <ul class="clients__list list-style--none">
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Napa</a>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">UBA</a>
                         </li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Labatt</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Coca-cola</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Air Canada</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Ecobank</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Diamond Privilege</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">UBA</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Direct connect</a></li>
-                        <li class="clients__item page__title--big"><a href="" class="clients__link"
-                                title="Web-design">Weyerhaeuser</a></li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Direct connect</a>
+                        </li>
+                        <li class="clients__item page__title--big">
+                            <a href="" class="clients__link" title="Web-design">Weyerhaeuser</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -872,7 +819,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="clients__block contact__block"><a href=""
-                                class="clients__button page__button--main text--uppercase"
+                                class="clients__button page__button--main text--uppercase magnetic-element"
                                 title="Download presentation">Хочу работать с вами</a></div>
                     </div>
                 </div>
@@ -906,7 +853,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="services-contact__block contact__block">
-                            <a href="" class="services-contact__button page__button--main text--uppercase"
+                            <a href="" class="services-contact__button page__button--main text--uppercase magnetic-element"
                         title="Download presentation">Хочу работать с вами</a>
                         </div>
                     </div>
@@ -917,5 +864,10 @@
     <footer class="footer">
         //= common/footer.html
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+    <script src="js/magnetic-button.min.js"></script>
+    <script src="js/ticker.min.js"></script>
 </body>
 </html>

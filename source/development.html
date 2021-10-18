@@ -17,6 +17,11 @@
 </head>
 
 <body class="main main--lined">
+    <div class="cursor not-active" id="cursor">
+        <div class="cursor__inner">
+        </div>
+    </div>
+    <div class="noise"></div>
     <header class="header">
         //= common/header.html
     </header>
@@ -69,7 +74,7 @@
                         <div class="accordion__item accordion__item--open">
                             <div class="accordion__header">
                                 <h3 class="accordion__title text--uppercase">Frontend Разработка</h3>
-                                <div class="accordion__button">
+                                <div class="accordion__button target-element">
                                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white"
@@ -82,7 +87,7 @@
                             <div class="accordion__box">
                                 <div class="container--grid">
                                     <div class="col-md-1 flex a-items--center relative small-order-2 middle-order-1">
-                                        <a class="page__button--main" title="Go to contact page">Написать нам</a>
+                                        <a class="page__button--main magnetic-element" title="Go to contact page">Написать нам</a>
                                     </div>
                                     <div class="col-md-3 small-order-1 middle-order-2">
                                         <ul
@@ -115,7 +120,7 @@
                         <div class="accordion__item">
                             <div class="accordion__header">
                                 <h3 class="accordion__title text--uppercase">Backend Разработка</h3>
-                                <div class="accordion__button">
+                                <div class="accordion__button target-element">
                                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white"
@@ -128,7 +133,7 @@
                             <div class="accordion__box">
                                 <div class="container--grid">
                                     <div class="col-md-1 flex a-items--center relative small-order-2 middle-order-1">
-                                        <a class="page__button--main" title="Go to contact page">Написать нам</a>
+                                        <a class="page__button--main magnetic-element" title="Go to contact page">Написать нам</a>
                                     </div>
                                     <div class="col-md-3 small-order-1 middle-order-2">
                                         <ul
@@ -165,7 +170,7 @@
                         <div class="accordion__item">
                             <div class="accordion__header">
                                 <h3 class="accordion__title text--uppercase">IOS/Android разработка</h3>
-                                <div class="accordion__button">
+                                <div class="accordion__button target-element">
                                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white"
@@ -178,7 +183,7 @@
                             <div class="accordion__box">
                                 <div class="container--grid">
                                     <div class="col-md-1 flex a-items--center relative small-order-2 middle-order-1">
-                                        <a class="page__button--main" title="Go to contact page">Написать нам</a>
+                                        <a class="page__button--main magnetic-element" title="Go to contact page">Написать нам</a>
                                     </div>
                                     <div class="col-md-3 small-order-1 middle-order-2">
                                         <ul
@@ -207,7 +212,7 @@
                         <div class="accordion__item">
                             <div class="accordion__header">
                                 <h3 class="accordion__title text--uppercase">Облачные решения</h3>
-                                <div class="accordion__button">
+                                <div class="accordion__button target-element">
                                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="13.1309" y1="12.7934" x2="39.0554" y2="38.7178" stroke="white"
@@ -220,7 +225,7 @@
                             <div class="accordion__box">
                                 <div class="container--grid">
                                     <div class="col-md-1 flex a-items--center relative small-order-2 middle-order-1">
-                                        <a class="page__button--main" title="Go to contact page">Написать нам</a>
+                                        <a class="page__button--main magnetic-element" title="Go to contact page">Написать нам</a>
                                     </div>
                                     <div class="col-md-3 small-order-1 middle-order-2">
                                         <ul
@@ -417,7 +422,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="services-contact__block contact__block">
-                            <a href="" class="services-contact__button page__button--main text--uppercase"
+                            <a href="" class="services-contact__button page__button--main text--uppercase magnetic-element"
                         title="Download presentation">Хочу работать с вами</a>
                         </div>
                     </div>
@@ -428,6 +433,11 @@
     <footer class="footer">
         //= common/footer.html
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/button-animation.min.js"></script>
+    <script src="js/magnetic-button.min.js"></script>
+    <script src="js/ticker.min.js"></script>
 </body>
 
 </html>

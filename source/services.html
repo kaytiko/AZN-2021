@@ -17,6 +17,11 @@
 </head>
 
 <body class="main main--lined">
+    <div class="cursor not-active" id="cursor">
+        <div class="cursor__inner">
+        </div>
+    </div>
+    <div class="noise"></div>
     <header class="header">
         //= common/header.html
     </header>
@@ -108,7 +113,7 @@
             <div class="services-principles__wrapper wrapper">
                 <div class="services-principles__container container--grid">
                     <div class="col-md-1 relative small-order-2 middle-order-1">
-                        <a class="services-principles__button page__button--main sticky" title="Go to contact page">
+                        <a class="services-principles__button page__button--main sticky magnetic-element" title="Go to contact page">
                             Написать нам
                         </a>
                     </div>
@@ -253,7 +258,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="clients__block contact__block"><a href=""
-                                class="clients__button page__button--main text--uppercase"
+                                class="clients__button page__button--main text--uppercase magnetic-element"
                                 title="Download presentation">Хочу работать с вами</a></div>
                     </div>
                 </div>
@@ -328,7 +333,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-3">
                         <div class="services-contact__block contact__block">
-                            <a href="" class="services-contact__button page__button--main text--uppercase"
+                            <a href="" class="services-contact__button page__button--main text--uppercase magnetic-element"
                         title="Download presentation">Хочу работать с вами</a>
                         </div>
                     </div>
@@ -339,7 +344,10 @@
     <footer class="footer">
         //= common/footer.html
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/cursor.min.js"></script>
     <script src="js/button-animation.min.js"></script>
+    <script src="js/magnetic-button.min.js"></script>
     <script src="js/ticker.min.js"></script>
 </body>
 

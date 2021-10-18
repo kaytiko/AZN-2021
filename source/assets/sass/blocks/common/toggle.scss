@@ -10,7 +10,7 @@
     &__top, &__bottom {
         width: rem(70px);
         height: rem(1px);
-        background-color: var(--white);
+        background-color: var(--text-color);
         transition: width 0.3s ease-in;
     }
 

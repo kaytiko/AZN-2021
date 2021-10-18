@@ -21,15 +21,12 @@
     opacity: 0;
   }
 
-  &--transparent {
-    opacity: 0;
-  }
-
   &--expanded {
-    width: 80px;
-    height: 80px;
+    width: rem(70px);
+    height: rem(70px);
     border-radius: 50%;
-    border: 1px solid var(--main-orange);
+    border: none;
+    background-color: var(--white);
   }
 
   @include tablet {

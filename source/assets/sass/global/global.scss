@@ -56,6 +56,23 @@ body {
       z-index: 2;
     }
   }
+
+  &.main--white {
+    background-color: var(--white);
+    --text-color: var(--black);
+    color: var(--text-color);
+
+    .page__button::after,
+    .product-info__link,
+    .page__banner--code::before,
+    .solution-slider svg {
+      filter: invert(1);
+    }
+
+    &::before {
+      filter: invert(1);
+    }
+  }
 }
 
 a {
